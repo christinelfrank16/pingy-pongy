@@ -20,11 +20,11 @@ namespace PingyPongy.Tests
             Assert.AreEqual(-1, testPingPong.ConvertToNum("Invalid input"));
         }
 
-        // [TestMethod]
-        // public void ConvertToNum_CheckForNumber_InvalidString()
-        // {
-        //     PingPong testPingPong = new PingPong();
-        //     Assert.AreEqual("Invalid input", testPingPong.ConvertToNum("Invalid input"));
-        // }
+        [TestMethod]
+        public void ConvertToNum_CheckForPosNumber_InvalidNumber()
+        {
+            PingPong testPingPong = new PingPong();
+            Assert.AreEqual(-1, testPingPong.ConvertToNum("-7"));
+        }
     }
 }
